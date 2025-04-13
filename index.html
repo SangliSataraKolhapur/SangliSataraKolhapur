@@ -3,86 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pramote Your Brand With Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Sangli_Satara_Kolhapur | Digital Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background: #222;
-      color: #fff;
-      padding: 40px 20px;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: gold;
+      padding: 2rem 1rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+
+    .logo {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      height: 90px;
+      max-width: 100px;
+    }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
+      font-weight: 600;
+      padding: 0 1rem;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
-    .services h2,
-    .instagram h2,
-    .contact h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #222;
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
     }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
+
+    .service-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
     }
-    footer {
-      background: #222;
-      color: #fff;
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      color: #5d3fd3;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .brands {
       text-align: center;
-      padding: 20px;
+      padding: 3rem 2rem;
     }
-    .elfsight-app {
-      margin-top: 30px;
+
+    .brands h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #5d3fd3;
+    }
+
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .brand-logos img {
+      height: 100px;
+      max-width: 180px;
+      object-fit: contain;
+      filter: grayscale(1);
+      transition: filter 0.3s ease;
+    }
+
+    .brand-logos img:hover {
+      filter: grayscale(0);
+    }
+
+    .youtube {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .youtube h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #5d3fd3;
+    }
+
+    .youtube iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .insta-embed {
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+
+    footer {
+      background: #1f1c2c;
+      color: #eee;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    /* Extra Small Devices (phones) */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .logo {
+        height: 40px;
+        top: 10px;
+        left: 10px;
+      }
+
+      .youtube iframe {
+        height: 220px;
+      }
+
+      .brand-logos img {
+        height: 60px;
+      }
+    }
+
+    /* Medium Devices (tablets) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .youtube iframe {
+        height: 300px;
+      }
+
+      .brand-logos img {
+        height: 80px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Sangli-Satara-Kolhapur Promotions</h1>
-    <p>Digital Marketing | Video Editing | Brand Promotion</p>
+    <img src="Sangli-Satara-Kolhapur Logo.png" alt="Logo" class="logo" />
+    <h1>Sangli_Satara_Kolhapur</h1>
+    <p>Your Digital Partner for Promotions, Marketing & Creativity</p>
   </header>
 
+  <!-- Services -->
   <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Digital Marketing Campaigns</li>
-      <li>Promotional Reel Creation</li>
-      <li>Video Editing & Designing</li>
-      <li>Logo & Brand Identity Designing</li>
-      <li>Instagram Growth & Brand Promotions</li>
-    </ul>
+    <div class="service-card">
+      <h3>🎥 Video Editing</h3>
+      <p>Premium video editing for Instagram, YouTube, and promotional content.</p>
+    </div>
+    <div class="service-card">
+      <h3>🚀 Digital Marketing</h3>
+      <p>Result-driven digital strategies tailored to grow your online presence.</p>
+    </div>
+    <div class="service-card">
+      <h3>🎨 Branding & Logos</h3>
+      <p>Build your identity with stunning logos and memorable branding assets.</p>
+    </div>
+    <div class="service-card">
+      <h3>📲 Influencer Promotions</h3>
+      <p>Promote your business on our Instagram page with 100K+ audience reach.</p>
+    </div>
   </section>
 
-  <section class="instagram">
-    <h2>Follow Us On Instagram</h2>
-    <!-- Elfsight Instagram Feed Embed -->
+  <!-- Brands -->
+  <section class="brands">
+    <h2>Brands We've Worked With</h2>
+    <div class="brand-logos">
+      <img src="brand1.png" alt="Brand 1" />
+      <img src="brand2.png" alt="Brand 2" />
+      <img src="brand3.png" alt="Brand 3" />
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section class="youtube">
+    <h2>Watch Our YouTube Videos</h2>
+    <iframe src="https://www.youtube.com/embed/WaZT5mR457E" allowfullscreen></iframe>
+  </section>
+
+  <!-- Instagram Embed -->
+  <div class="insta-embed">
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-197417bf-5274-4d3e-9ac6-64088eef419e" data-elfsight-app-lazy></div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📱 WhatsApp: <a href="https://wa.me/91XXXXXXXXXX">91XXXXXXXXXX</a></p>
-    <p>📩 Email: yourmail@example.com</p>
-  </section>
+  </div>
 
   <footer>
-    &copy; 2025 Sangli-Satara-Kolhapur Promotions | All rights reserved.
+    &copy; 2025 Sangli_Satara_Kolhapur | All Rights Reserved <br />
+    Instagram: <a href="https://instagram.com/YOUR_PAGE">@sangli_satara_kolhapur @shuubhamavthekar</a>
   </footer>
 
 </body>
